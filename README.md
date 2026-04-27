@@ -6,19 +6,6 @@ Official PHP SDK for STIMATA Portal V2 OAuth2 Authorization Server with native L
 [![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-blue.svg)](https://www.php.net/)
 [![Laravel](https://img.shields.io/badge/Laravel-8%20to%2013-red.svg)](https://laravel.com/)
 
-## Features
-
-- ✅ OAuth2 Client Credentials Flow (Machine-to-Machine)
-- ✅ OAuth2 Authorization Code Flow (Web Applications)
-- ✅ Automatic Token Refresh
-- ✅ Token Introspection & Revocation
-- ✅ User Profile Management
-- ✅ Role Switching
-- ✅ Resource-based Access Control
-- ✅ CSRF Protection
-- ✅ Native Laravel 8-13 Support with Auto-Discovery
-- ✅ Facade, Middleware & Helper Functions
-
 ## Requirements
 
 - PHP 7.4 or higher
