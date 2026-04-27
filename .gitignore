@@ -1,0 +1,48 @@
+# Composer
+/vendor/
+composer.lock
+
+# PHPUnit
+/phpunit.xml
+/.phpunit.result.cache
+/coverage/
+/build/
+
+# IDE
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Laravel specific
+/storage/
+/bootstrap/cache/
+
+# Testing
+/.phpunit.cache
+
+# Build artifacts
+/dist/
+/docs/_build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+/logs/
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# PHPStan
+/phpstan.neon.local
+
+# Pint
+/.pint.cache

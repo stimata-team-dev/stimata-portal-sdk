@@ -1,0 +1,71 @@
+{
+  "name": "stimata/portal-sdk",
+  "description": "Official PHP SDK for STIMATA Portal V2 OAuth2 Authorization Server with native Laravel support",
+  "keywords": [
+    "stimata",
+    "oauth2",
+    "laravel",
+    "authentication",
+    "authorization",
+    "sso",
+    "sdk"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "STIMATA Engineering Team",
+      "email": "engineering@stimata.ac.id"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0|^8.1|^8.2|^8.3",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
+    "illuminate/contracts": "^8.0|^9.0|^10.0|^11.0|^12.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5|^10.0",
+    "orchestra/testbench": "^6.0|^7.0|^8.0|^9.0",
+    "mockery/mockery": "^1.4",
+    "phpstan/phpstan": "^1.10",
+    "laravel/pint": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Stimata\\Portal\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Stimata\\Portal\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Stimata\\Portal\\StimataServiceProvider"
+      ],
+      "aliases": {
+        "Stimata": "Stimata\\Portal\\Facades\\Stimata"
+      }
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+    "format": "vendor/bin/pint",
+    "analyse": "vendor/bin/phpstan analyse"
+  },
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

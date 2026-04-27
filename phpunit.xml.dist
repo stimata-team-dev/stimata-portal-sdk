@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         failOnRisky="true"
+         failOnWarning="true"
+         stopOnFailure="false"
+         cacheDirectory=".phpunit.cache">
+    <testsuites>
+        <testsuite name="STIMATA Portal SDK Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+        <exclude>
+            <directory>./src/Facades</directory>
+            <file>./src/helpers.php</file>
+        </exclude>
+        <report>
+            <html outputDirectory="coverage"/>
+            <text outputFile="php://stdout" showUncoveredFiles="true"/>
+        </report>
+    </coverage>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="STIMATA_CLIENT_ID" value="test-client-id"/>
+        <env name="STIMATA_CLIENT_SECRET" value="test-client-secret"/>
+        <env name="STIMATA_BASE_URL" value="http://localhost:9091/api"/>
+        <env name="STIMATA_REDIRECT_URI" value="http://localhost/auth/callback"/>
+    </php>
+</phpunit>
